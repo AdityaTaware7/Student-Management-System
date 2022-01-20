@@ -9,7 +9,7 @@ import json
 # MY db connection
 local_server= True
 app = Flask(__name__)
-app.secret_key='kusumachandashwini'
+app.secret_key='adityataware'
 
 
 # this is for getting unique user access
@@ -26,7 +26,7 @@ def load_user(user_id):
 app.config['SQLALCHEMY_DATABASE_URI']='mysql://root:@localhost/student'
 db=SQLAlchemy(app)
 
-# here we will create db models that is tables
+# here we will create database models that is tables
 class Test(db.Model):
     id=db.Column(db.Integer,primary_key=True)
     name=db.Column(db.String(100))
@@ -79,10 +79,17 @@ def studentdetails():
     query=db.engine.execute(f"SELECT * FROM `student`") 
     return render_template('studentdetails.html',query=query)
 
+
 @app.route('/triggers')
 def triggers():
     query=db.engine.execute(f"SELECT * FROM `trig`") 
     return render_template('triggers.html',query=query)
+
+@app.route('/check_attendance')
+def check_attendance():
+    query=db.engine.execute(f"SELECT * from attendence where attendance < 75; ") 
+    return render_template('check_attendance.html',query=query)
+
 
 @app.route('/department',methods=['POST','GET'])
 def department():

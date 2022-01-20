@@ -32,18 +32,17 @@ CREATE TABLE `attendence` (
   `attendance` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `attendence`
+
+-- Inserting data for table `attendence`
 --
 
 INSERT INTO `attendence` (`aid`, `rollno`, `attendance`) VALUES
-(6, '1ve17cs012', 98);
+(6, '1ve17cs012', 100);
 
 -- --------------------------------------------------------
 
---
+
 -- Table structure for table `department`
---
 
 CREATE TABLE `department` (
   `cid` int(11) NOT NULL,
@@ -52,7 +51,6 @@ CREATE TABLE `department` (
 
 --
 -- Dumping data for table `department`
---
 
 INSERT INTO `department` (`cid`, `branch`) VALUES
 (2, 'Information Science'),
@@ -62,7 +60,7 @@ INSERT INTO `department` (`cid`, `branch`) VALUES
 (7, 'Computer Science'),
 (8, 'IOT');
 
--- --------------------------------------------------------
+----------------------------------------------------------
 
 --
 -- Table structure for table `student`
@@ -116,7 +114,6 @@ INSERT INTO `test` (`id`, `name`, `email`) VALUES
 
 --
 -- Table structure for table `trig`
---
 
 CREATE TABLE `trig` (
   `tid` int(11) NOT NULL,
@@ -130,9 +127,9 @@ CREATE TABLE `trig` (
 --
 
 INSERT INTO `trig` (`tid`, `rollno`, `action`, `timestamp`) VALUES
-(7, '1ve17cs012', 'STUDENT INSERTED', '2021-01-10 19:19:56'),
-(8, '1ve17cs012', 'STUDENT UPDATED', '2021-01-10 19:20:31'),
-(9, '1ve17cs012', 'STUDENT DELETED', '2021-01-10 19:21:23');
+(7, '1ve17cs012', 'STUDENT INSERTED', '2022-01-10 19:19:56'),
+(8, '1ve17cs012', 'STUDENT UPDATED', '2022-01-10 19:20:31'),
+(9, '1ve17cs012', 'STUDENT DELETED', '2022-01-10 19:21:23');
 
 -- --------------------------------------------------------
 
